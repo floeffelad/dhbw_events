@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-05-23T16:22:47Z" product-name="dhbw_events">
+		<header/>
+		<body>
+			<trans-unit id="tx_dhbwevents_domain_model_event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.date">
+				<source>Datum</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.end_date">
+				<source>Datum Ende</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.time">
+				<source>Uhrzeit</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.location">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.organizer">
+				<source>Organisator</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_event.categories">
+				<source>Kategorien</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_category">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_category.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_category.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_dhbwevents_domain_model_category.is_internal">
+				<source>ausschließen</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

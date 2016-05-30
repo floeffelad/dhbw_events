@@ -1,0 +1,16 @@
+
+<div class="event-detail" >
+	<ul>
+		<li>
+			<b><f:translate key="tx_dhbwevents_domain_model_event.date" />:</b>&nbsp;<f:format.date format="d.m.Y">{event.date}</f:format.date>
+			<f:if condition="{event.endDate}"> - <f:format.date format="d.m.Y">{event.endDate}</f:format.date></f:if>
+		</li>
+		<li><b><f:translate key="tx_dhbwevents_domain_model_event.time" />:</b>&nbsp;{event.time}</li>
+		<li><b><f:translate key="tx_dhbwevents_domain_model_event.location" />:</b>&nbsp;{event.location}</li>
+	</ul>
+
+	<div class="description">
+
+		<f:format.html>{event.description}</f:format.html>
+	</div>
+</div>

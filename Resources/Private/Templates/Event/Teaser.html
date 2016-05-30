@@ -1,0 +1,28 @@
+<f:layout name="Default" />
+
+<!-- Frontend -->
+<f:section name="main">
+
+<f:flashMessages renderMode="div" />
+
+<h2>Veranstaltungen</h2>
+    <div class="events">
+        <f:for each="{events}" as="event">
+            <div class="col-md-4">
+                <h6><f:format.date format="d.m.Y">{event.date}</f:format.date>
+                <f:if condition="{event.endDate}"> - <f:format.date format="d.m.Y">{event.endDate}</f:format.date></f:if> &nbsp; {event.time}</h6>
+                <div class="cs-element">
+                    <span class="cs-circle"></span>
+                    <span class="cs-line"></span>
+                </div>
+                <f:link.action action="show" pageUid="{settings.detail}" arguments="{event : event}"><h3>{event.title}</h3><p>{event.teaser}<span class="read-more"> Weiterlesen</span></p></f:link.action>
+            </div>
+        </f:for>
+    </div>
+    <div class="listview-link">
+        <f:link.page pageUid="{settings.list}">
+            <span class="btn-link black center">Alle anzeigen</span>
+        </f:link.page>
+    </div>
+</f:section>
+

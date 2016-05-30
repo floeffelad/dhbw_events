@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-05-23T16:22:47Z" product-name="dhbw_events">
+		<header/>
+		<body>
+			<trans-unit id="date.description">
+				<source>Datum Beginn</source>
+			</trans-unit>
+			<trans-unit id="end_date.description">
+				<source>Datum Ende</source>
+			</trans-unit>
+			<trans-unit id="time.description">
+				<source>Uhrzeit</source>
+			</trans-unit>
+			<trans-unit id="location.description">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="organizer.description">
+				<source>Organisator</source>
+			</trans-unit>
+			<trans-unit id="categories.description">
+				<source>Kategorien</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

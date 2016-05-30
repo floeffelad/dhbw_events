@@ -1,0 +1,51 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages renderMode="div" />
+
+<a href="#filter" class="filterCollapse" data-toggle="collapse">Veranstaltungen filtern<span data-grunticon-embed="data-grunticon-embed" class="icon icon-arrow-right"></span></a>
+
+<div id="filter" class="collapse col-xs-12">
+	<f:form class="tx-dhbwevents-form" method="post" action="list" name="demand" object="{demand}">
+
+		<div class="col-xs-6">
+			<f:form.textfield id="searchWord" property="searchWord" style="width: 90%;" placeholder="Suche nach" additionalAttributes="{onChange : 'document.demand.submit();'}" />
+			<f:form.select id="categories" property="category" options="{categories}" optionValueField="uid" optionLabelField="title" style="width: 90%;" additionalAttributes="{onChange : 'document.demand.submit();'}"><select><option>{title}</option></select></f:form.select><br />
+		</div>
+
+		<div class="col-xs-6">
+			<f:form.textfield id="startdate" class="datepicker" property="minDate" placeholder="von Datum"  value="{f:format.date(date:'{}', format: 'Y-m-d')}" size="12"/>&nbsp;bis&nbsp;zu&nbsp;
+			<f:form.textfield id="enddate" class="datepicker" property="maxDate" placeholder="Datum"  value="{f:format.date(date: '{}', format: 'Y-m-d')}" size="12" />
+			<f:form.submit value="Jetzt Filtern"/>
+		</div>
+
+	</f:form>
+</div>
+	<f:if condition="{events}">
+		<f:then>
+			<f:widget.paginate objects="{events}" as="paginatedEvents" configuration="{itemsPerPage: 8, insertAbove: 0, insertBelow: 1}">
+				<f:for each="{paginatedEvents}" as="event">
+					<div class="event col-xs-12">
+						<div class="col-xs-2">
+							<h6><f:format.date format="d.m.Y">{event.date}</f:format.date>
+							<f:if condition="{event.endDate}">- <f:format.date format="d.m.Y">{event.endDate}</f:format.date></f:if></h6>
+							<h6>{event.time}</h6>
+						</div>
+						<div class="col-xs-8">
+							<f:link.action action="show" pageUid="{settings.detail}" arguments="{event : event}"><h3>{event.title}</h3><br><p>{event.teaser}<span class="read-more"> Weiterlesen</span></p></f:link.action>
+						</div>
+						<div class="col-xs-2">
+							<h6>{event.location}</h6>
+						</div>
+					</div>
+				</f:for>
+			</f:widget.paginate>
+		</f:then>
+		<f:else>
+			<div class="nothingFound">
+				<h3>Sorry, für ihre Suche konnte leider nichts gefunden werden. Bitte versuchen Sie es erneut...</h3>
+			</div>
+		</f:else>
+	</f:if>
+</f:section>

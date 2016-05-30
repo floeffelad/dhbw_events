@@ -1,0 +1,18 @@
+
+plugin.tx_dhbwevents_events {
+	view {
+		# cat=plugin.tx_dhbwevents_events/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:dhbw_events/Resources/Private/Templates/
+		# cat=plugin.tx_dhbwevents_events/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:dhbw_events/Resources/Private/Partials/
+		# cat=plugin.tx_dhbwevents_events/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:dhbw_events/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_dhbwevents_events//a; type=string; label=Default storage PID
+		storagePid = 354
+	}
+}
+
+plugin.tx_dhbwevents_events.settings.detail = 358
+plugin.tx_dhbwevents_events.settings.list = 355

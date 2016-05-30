@@ -1,0 +1,12 @@
+
+<f:layout name="Default" />
+
+<f:section name="main">
+	<div class="event-detail-header">
+	    <h6><f:format.date format="d.m.Y">{event.date}</f:format.date></h6>
+	    <h1>{event.title}</h1>
+	</div>
+
+<f:flashMessages renderMode="div" />
+<f:render partial="Event/Properties" arguments="{event:event}" />
+</f:section>
